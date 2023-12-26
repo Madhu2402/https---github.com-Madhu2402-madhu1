@@ -1,0 +1,33 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.container1 {
+    color:white;
+}
+/* In external.css */
+.background-image {
+    background-image: url('https://getwallpapers.com/wallpaper/full/7/c/a/933650-purple-and-white-backgrounds-1920x1080-ipad-pro.jpg'); /* Replace with the path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.background-image1 {
+    background-image: url('https://www.desktopbackground.org/download/1024x600/2014/02/10/714979_black-flower-wallpapers-imgmob_1024x768_h.jpg'); /* Replace with the path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 70px;
+}
+
