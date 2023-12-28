@@ -18,7 +18,7 @@ const correctPassword = 'madhu123';
  
 
 // Route for the root path
-app.get('/', (req, res) => {
+app.post('/', (req, res) => {
     res.sendFile(__dirname + '/index.html'); // Replace 'index.html' with your desired home page
 });
 
