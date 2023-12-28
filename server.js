@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const path = require('path');
 
 const app = express();
@@ -7,11 +8,17 @@ const PORT = 7000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(cors());
 
 const correctPassword = 'madhu123';
 
+//app.get('/', (req, res) => {
+    //res.send('Server is running'); // You can replace this with the content you want to serve
+ //});
+ 
+
 // Route for the root path
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html'); // Replace 'index.html' with your desired home page
 });
 
