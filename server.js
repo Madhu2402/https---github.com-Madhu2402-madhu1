@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
     res.sendFile(__dirname + '/index.html'); // Replace 'index.html' with your desired home page
 });
 
-app.post('/login', (req, res) => {
+app.post('https---github.com-Madhu2402-madhu1/login', (req, res) => {
     const enteredPassword = req.body.password;
 
     if (enteredPassword === correctPassword) {
