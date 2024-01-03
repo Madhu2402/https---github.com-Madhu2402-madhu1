@@ -13,13 +13,23 @@ app.use(cors());
 const correctPassword = 'madhu123';
 
 //app.get('/', (req, res) => {
-    //res.send('Server is running'); // You can replace this with the content you want to serve
+   // res.send('Server is running'); // You can replace this with the content you want to serve
  //});
  
 
 // Route for the root path
-app.post('/', (req, res) => {
+app.get('/', (req, res) => {
+    console.log('Received GET request at /');
     res.sendFile(__dirname + '/index.html'); // Replace 'index.html' with your desired home page
+});
+
+app.get('/external.css', (req, res) => {
+    res.sendFile(__dirname + '/external.css');
+})
+
+app.use((req, res, next) => {
+    console.log(`Requested: ${req.method} ${req.url}`);
+    next();
 });
 
 app.post('/login', (req, res) => {
